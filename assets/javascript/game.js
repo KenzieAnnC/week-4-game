@@ -51,31 +51,41 @@ $(document).ready(function () {
 
     $(".container").on("click", ".crystals", function () {
 
-        if (totalScore > matchNumber) {
+        // if (totalScore > matchNumber) {
+        //     gameFinish = true;
+        //     resetGame();
+        // } else if (totalScore === matchNumber) {
+        //     gameFinish = true;
+        //     wins++;
+        //     resetGame();
+        // } else if (totalScore < matchNumber) {
+        //     gameFinish = false;
+        // }
+
+    }).on("click", "#crystal-1", function () {
+
+        crystalOneNumber = parseInt(crystalOneNumber);
+        totalScore = parseInt(totalScore);
+        totalScore = crystalOneNumber + totalScore;
+
+        if (totalScore >= matchNumber) {
             gameFinish = true;
             resetGame();
         } else if (totalScore === matchNumber) {
             gameFinish = true;
             wins++;
             resetGame();
-        } else if (totalScore < matchNumber) {
+        } else if (totalScore <= matchNumber) {
             gameFinish = false;
         }
 
-    }).on("click", "#crystal-1", function () {
 
-        // getTotalScore(); {
-
-        crystalOneNumber = parseInt(crystalOneNumber);
-        totalScore = parseInt(totalScore);
-    
-
-     
-        totalScore = crystalOneNumber + totalScore;
         
     
         // console.log(crystalOneNumber);
-        console.log(crystalOneNumber + totalScore);
+        console.log("total score " + totalScore);
+        // console.log(crystalOneNumber + totalScore);
+        console.log(gameFinish);
     });
 
 
