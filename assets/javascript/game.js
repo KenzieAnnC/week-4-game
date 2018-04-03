@@ -33,4 +33,8 @@ crystalFourNumber = randomCrystalNumber() + crystalFourNumber;
 console.log(crystalOneNumber);
 
 
+var totalScore ="";
+
+
+
 });
