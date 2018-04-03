@@ -1,40 +1,43 @@
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-var number = "";
+    var matchNumber = "";
+    var totalScore = 0;
+    var crystalOneNumber = 0;
+    var crystalTwoNumber = 0;
+    var crystalThreeNumber = 0;
+    var crystalFourNumber = 0;
+    var wins = 0;
+    var losses = 0;
+    
 
-function randomMatchNumber(min,max)
-{
-    return Math.floor(Math.random()*(120-19+1)+19);
-}
+    function randomMatchNumber(min, max) {
+        return Math.floor(Math.random() * (120 - 19 + 1) + 19);
+    }
 
-number = randomMatchNumber() + number;
+    matchNumber = randomMatchNumber() + matchNumber;
 
-$("#number").append("<br>" + number);
+    $("#number").append("<br>" + matchNumber);
 
-console.log(number);
-
-
-var crystalOneNumber = 0;
-var crystalTwoNumber = 0;
-var crystalThreeNumber = 0;
-var crystalFourNumber = 0;
-
-function randomCrystalNumber(min,max)
-{
-    return Math.floor(Math.random()*(12-1+1)+1);
-}
-
-crystalOneNumber = randomCrystalNumber() + crystalOneNumber;
-crystalTwoNumber = randomCrystalNumber() + crystalTwoNumber;
-crystalThreeNumber = randomCrystalNumber() + crystalThreeNumber;
-crystalFourNumber = randomCrystalNumber() + crystalFourNumber;
-
-console.log(crystalOneNumber);
+    console.log(matchNumber);
 
 
-var totalScore ="";
+   
 
-$("#crystal-1")
+    function randomCrystalNumber(min, max) {
+        return Math.floor(Math.random() * (12 - 1 + 1) + 1);
+    }
+
+    crystalOneNumber = randomCrystalNumber() + crystalOneNumber;
+    crystalTwoNumber = randomCrystalNumber() + crystalTwoNumber;
+    crystalThreeNumber = randomCrystalNumber() + crystalThreeNumber;
+    crystalFourNumber = randomCrystalNumber() + crystalFourNumber;
+
+    console.log(crystalOneNumber);
+
+
+    
+
+    $("")
 
 });
