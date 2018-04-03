@@ -21,7 +21,6 @@ $(document).ready(function () {
         crystalThreeNumber = 0;
         crystalFourNumber = 0;
 
-        // $("#total-score").empty();
     }
     
 
@@ -71,17 +70,17 @@ $(document).ready(function () {
         totalScore = parseInt(totalScore);
     
 
-        if (gameFinish = false) {   
+     
         totalScore = crystalOneNumber + totalScore;
-        }
+        
     
-        console.log(crystalOneNumber);
+        // console.log(crystalOneNumber);
         console.log(crystalOneNumber + totalScore);
     });
 
 
     console.log(gameFinish);
-    console.log(crystalOneNumber);
+    console.log(crystalOneNumber + totalScore);
 
 
 });
