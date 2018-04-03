@@ -23,6 +23,7 @@ $(document).ready(function () {
 
         // $("#total-score").empty();
     }
+    
 
 
     function randomMatchNumber(min, max) {
@@ -49,24 +50,33 @@ $(document).ready(function () {
     crystalFourNumber = randomCrystalNumber() + crystalFourNumber;
 
 
-    $(".crystals").on("click", "#crystal-1", function () {
+    $(".container").on("click", ".crystals", function () {
 
         if (totalScore > matchNumber) {
             gameFinish = true;
             resetGame();
-        } else {
-
-        if (totalScore === matchNumber) {
+        } else if (totalScore === matchNumber) {
             gameFinish = true;
-            wins ++;
+            wins++;
             resetGame();
-        
+        } else if (totalScore < matchNumber) {
+            gameFinish = false;
         }
 
+    }).on("click", "#crystal-1", function () {
+
+        // getTotalScore(); {
+
+        crystalOneNumber = parseInt(crystalOneNumber);
+        totalScore = parseInt(totalScore);
+    
+
+        if (gameFinish = false) {   
+        totalScore = crystalOneNumber + totalScore;
         }
-
-        console.log(gameFinish);
-
+    
+        console.log(crystalOneNumber);
+        console.log(crystalOneNumber + totalScore);
     });
 
 
