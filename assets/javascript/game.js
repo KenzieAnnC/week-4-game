@@ -15,10 +15,10 @@ $("#number").append("<br>" + number);
 console.log(number);
 
 
-var crystalOneNumber ="";
-var crystalTwoNumber ="";
-var crystalThreeNumber ="";
-var crystalFourNumber ="";
+var crystalOneNumber = 0;
+var crystalTwoNumber = 0;
+var crystalThreeNumber = 0;
+var crystalFourNumber = 0;
 
 function randomCrystalNumber(min,max)
 {
@@ -35,6 +35,6 @@ console.log(crystalOneNumber);
 
 var totalScore ="";
 
-
+$("#crystal-1")
 
 });
