@@ -1,5 +1,11 @@
+
 .jumbotron {
     font-family: 'Berkshire Swash', cursive;
-    background: plum
+    background: rgb(221, 188, 221);
 
+}
+
+body {
+    background: url('../images/green_dust.png');
+    font-family: 'Oswald', sans-serif;
 }
