@@ -34,21 +34,18 @@ $(document).ready(function () {
 
         $("#match-number").text(matchNumber);
 
-        
-
-        wins = parseInt(wins);
-
     }
 
     function checkGame() {
         if (totalScore >= matchNumber) {
             gameFinish = true;
-            losses++;
-            $("#losses").text(losses);
+           
+            
             resetGame();
            
         } else if (totalScore === matchNumber) {
             gameFinish = true;
+            wins = parseInt(wins);
             wins++;
             $("#wins").text(wins);
             resetGame();
@@ -56,7 +53,14 @@ $(document).ready(function () {
         } else if (totalScore <= matchNumber) {
             gameFinish = false;
 
+        };
+
+        if (totalScore > matchNumber) {
+            losses = parseInt(losses);
+            losses++;
+            $("#losses").text(losses);
         }
+
         totalScore = parseInt(totalScore);
         $("#total-score").text(totalScore);
 
@@ -100,7 +104,6 @@ $(document).ready(function () {
         console.log("total score " + totalScore);
         console.log(gameFinish);
         console.log(crystalOneNumber);
-        console.log(matchNumber);
 
         if (gameFinish = true) {
             return false;
@@ -117,7 +120,6 @@ $(document).ready(function () {
         console.log("total score " + totalScore);
         console.log(gameFinish);
         console.log(crystalTwoNumber);
-        console.log(matchNumber);
 
         if (gameFinish = true) {
             return false;
@@ -134,7 +136,6 @@ $(document).ready(function () {
         console.log("total score " + totalScore);
         console.log(gameFinish);
         console.log(crystalThreeNumber);
-        console.log(matchNumber);
 
         if (gameFinish = true) {
             return false;
@@ -151,7 +152,6 @@ $(document).ready(function () {
         console.log("total score " + totalScore);
         console.log(gameFinish);
         console.log(crystalFourNumber);
-        console.log(matchNumber);
 
         if (gameFinish = true) {
             return false;
