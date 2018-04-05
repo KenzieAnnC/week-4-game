@@ -9,3 +9,8 @@ body {
     background: url('../images/green_dust.png');
     font-family: 'Oswald', sans-serif;
 }
+
+
+.container {
+    width: 960px;
+}
