@@ -12,6 +12,9 @@ $(document).ready(function () {
     var losses = 0;
     var gameStart = false;
     var gameFinish = false;
+    var gameWin = false;
+    var gameLose = false;
+    
 
 
 
@@ -33,50 +36,7 @@ $(document).ready(function () {
 
         $("#match-number").text(matchNumber);
 
-        
-
-        wins = parseInt(wins);
-
     }
-
-    function checkGame() {
-        if (totalScore >= matchNumber) {
-            gameFinish = true;
-            checkLoss();
-            resetGame();
-         
-           
-        } else if (totalScore === matchNumber) {
-            gameFinish = true;
-            checkWin();
-            resetGame();
-            
-            
-        } else if (totalScore <= matchNumber) {
-            gameFinish = false;
-
-        }
-        totalScore = parseInt(totalScore);
-        $("#total-score").text(totalScore);
-        
-
-    };
-
-    function checkWin() {
-        if (totalScore === matchNumber && (!gameFinish)) {
-            wins++;
-            $("#wins").text(wins);
-        }
-    };
-
-    function checkLoss() {
-        if (totalScore > totalScore && (!gameFinish)) {
-            losses++;
-            $("#losses").text(losses);
-        }
-    };
-
-
 
     function randomMatchNumber(min, max) {
         return Math.floor(Math.random() * (120 - 19 + 1) + 19);
@@ -92,6 +52,46 @@ $(document).ready(function () {
         return Math.floor(Math.random() * (12 - 1 + 1) + 1);
     }
 
+    function checkGame() {
+        if (gameLose = true) {
+           checkLoss();
+         
+           
+        } else if (gameWin = true) {
+            checkWin();
+           
+            
+            
+        } else if (totalScore <= matchNumber) {
+            gameFinish = false;
+
+        }
+        totalScore = parseInt(totalScore);
+        $("#total-score").text(totalScore);
+        
+
+    };
+
+    function checkWin() {
+        if (totalScore === matchNumber) {
+            gameWin = true;
+            $("#wins").text(wins);
+            wins++;
+            gameFinish = true;
+            resetGame();
+            
+        }
+    };
+
+    function checkLoss() {
+        if (totalScore >= matchNumber) {
+            gameLose = true;
+            losses++;
+            $("#losses").text(losses);
+            gameFinish = true;
+            resetGame();
+        }
+    };
 
 
     crystalOneNumber = randomCrystalNumber() + crystalOneNumber;
@@ -100,20 +100,19 @@ $(document).ready(function () {
     crystalFourNumber = randomCrystalNumber() + crystalFourNumber;
     
 
-
-   
-
     $(".container").on("click", "#crystal-1", function () {
         crystalOneNumber = parseInt(crystalOneNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalOneNumber + totalScore;
-        gameStart = true;
         checkGame();
+    
     
 
         console.log("total score " + totalScore);
         console.log(crystalOneNumber);
         console.log(matchNumber);
+        console.log(wins);
+        console.log(losses);
 
       
 
@@ -121,13 +120,15 @@ $(document).ready(function () {
         crystalTwoNumber = parseInt(crystalTwoNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalTwoNumber + totalScore;
-        gameStart = true;
         checkGame();
+       
     
 
         console.log("total score " + totalScore);
         console.log(crystalTwoNumber);
         console.log(matchNumber);
+        console.log(wins);
+        console.log(losses);
 
        
 
@@ -135,13 +136,15 @@ $(document).ready(function () {
         crystalThreeNumber = parseInt(crystalThreeNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalThreeNumber + totalScore;
-        gameStart = true;
         checkGame();
+      
  
 
         console.log("total score " + totalScore);
         console.log(crystalThreeNumber);
         console.log(matchNumber);
+        console.log(wins);
+        console.log(losses);
 
      
 
@@ -149,13 +152,15 @@ $(document).ready(function () {
         crystalFourNumber = parseInt(crystalFourNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalFourNumber + totalScore;
-        gameStart = true;
         checkGame();
+       
       
 
         console.log("total score " + totalScore);
         console.log(crystalFourNumber);
         console.log(matchNumber);
+        console.log(wins);
+        console.log(losses);
 
       
 
