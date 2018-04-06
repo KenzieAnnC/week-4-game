@@ -16,9 +16,11 @@ body {
 }
 
 #wins {
+    float: left;
     margin: 0 auto;
 }
 
 #losses {
+    float: left;
     margin: 0 auto;
 }

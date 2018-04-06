@@ -59,10 +59,12 @@ $(document).ready(function () {
            
         } else if (gameWin = true) {
             checkWin();
+            // wins++;
+            // $("#wins").text(wins);
+            
            
-            
-            
-        } else if (totalScore <= matchNumber) {
+         
+        } else if (totalScore < matchNumber) {
             gameFinish = false;
 
         }
@@ -75,11 +77,11 @@ $(document).ready(function () {
     function checkWin() {
         if (totalScore === matchNumber) {
             gameWin = true;
-            $("#wins").text(wins);
             wins++;
+            $("#wins").text(wins);
+            // $("#losses").text(losses);
             gameFinish = true;
             resetGame();
-            
         }
     };
 
@@ -110,9 +112,8 @@ $(document).ready(function () {
 
         console.log("total score " + totalScore);
         console.log(crystalOneNumber);
-        console.log(matchNumber);
-        console.log(wins);
-        console.log(losses);
+        console.log("Wins " + wins);
+        console.log("Losses " + losses);
 
       
 
@@ -126,9 +127,8 @@ $(document).ready(function () {
 
         console.log("total score " + totalScore);
         console.log(crystalTwoNumber);
-        console.log(matchNumber);
-        console.log(wins);
-        console.log(losses);
+        console.log("Wins " + wins);
+        console.log("Losses " + losses);
 
        
 
@@ -142,9 +142,8 @@ $(document).ready(function () {
 
         console.log("total score " + totalScore);
         console.log(crystalThreeNumber);
-        console.log(matchNumber);
-        console.log(wins);
-        console.log(losses);
+        console.log("Wins " + wins);
+        console.log("Losses " + losses);
 
      
 
@@ -158,9 +157,8 @@ $(document).ready(function () {
 
         console.log("total score " + totalScore);
         console.log(crystalFourNumber);
-        console.log(matchNumber);
-        console.log(wins);
-        console.log(losses);
+        console.log("Wins " + wins);
+        console.log("Losses " + losses);
 
       
 
