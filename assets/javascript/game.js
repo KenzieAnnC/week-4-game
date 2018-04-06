@@ -84,7 +84,7 @@ $(document).ready(function () {
     };
 
     function checkLoss() {
-        if (totalScore >= matchNumber) {
+        if (totalScore > matchNumber) {
             gameLose = true;
             losses++;
             $("#losses").text(losses);
