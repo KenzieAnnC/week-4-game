@@ -14,12 +14,11 @@ $(document).ready(function () {
     var gameFinish = false;
     var gameWin = false;
     var gameLose = false;
-    
+
 
 
 
     function resetGame() {
-        // resetCrystalNumber();
         matchNumber = "";
         totalScore = 0;
         crystalOneNumber = "";
@@ -46,7 +45,7 @@ $(document).ready(function () {
 
     $("#match-number").text(matchNumber);
 
-  
+
 
     function randomCrystalNumber(min, max) {
         return Math.floor(Math.random() * (12 - 1 + 1) + 1);
@@ -54,19 +53,20 @@ $(document).ready(function () {
 
     function checkGame() {
         if (totalScore < matchNumber) {
-            gameFinish = false; }
-        
+            gameFinish = false;
+        }
+
         else if (gameLose = true) {
-           checkLoss();
-         
+            checkLoss();
+
         } else if (gameWin = true) {
             checkWin();
-            
 
         }
+
         totalScore = parseInt(totalScore);
         $("#total-score").text(totalScore);
-        
+
 
     };
 
@@ -75,7 +75,6 @@ $(document).ready(function () {
             gameWin = true;
             wins++;
             $("#wins").text(wins);
-            // $("#losses").text(losses);
             gameFinish = true;
             resetGame();
         }
@@ -96,73 +95,38 @@ $(document).ready(function () {
     crystalTwoNumber = randomCrystalNumber() + crystalTwoNumber;
     crystalThreeNumber = randomCrystalNumber() + crystalThreeNumber;
     crystalFourNumber = randomCrystalNumber() + crystalFourNumber;
-    
+
 
     $(".container").on("click", "#crystal-1", function () {
         crystalOneNumber = parseInt(crystalOneNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalOneNumber + totalScore;
         checkGame();
-    
-    
 
-        console.log("total score " + totalScore);
-        console.log(crystalOneNumber);
-        console.log("Wins " + wins);
-        console.log("Losses " + losses);
-
-      
 
     }).on("click", "#crystal-2", function () {
         crystalTwoNumber = parseInt(crystalTwoNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalTwoNumber + totalScore;
         checkGame();
-       
-    
 
-        console.log("total score " + totalScore);
-        console.log(crystalTwoNumber);
-        console.log("Wins " + wins);
-        console.log("Losses " + losses);
-
-       
 
     }).on("click", "#crystal-3", function () {
         crystalThreeNumber = parseInt(crystalThreeNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalThreeNumber + totalScore;
         checkGame();
-      
- 
 
-        console.log("total score " + totalScore);
-        console.log(crystalThreeNumber);
-        console.log("Wins " + wins);
-        console.log("Losses " + losses);
-
-     
 
     }).on("click", "#crystal-4", function () {
         crystalFourNumber = parseInt(crystalFourNumber);
         totalScore = parseInt(totalScore);
         totalScore = crystalFourNumber + totalScore;
         checkGame();
-       
-      
 
-        console.log("total score " + totalScore);
-        console.log(crystalFourNumber);
-        console.log("Wins " + wins);
-        console.log("Losses " + losses);
 
-      
 
     });
-
-
-
-
 
 
 });
