@@ -53,19 +53,15 @@ $(document).ready(function () {
     }
 
     function checkGame() {
-        if (gameLose = true) {
+        if (totalScore < matchNumber) {
+            gameFinish = false; }
+        
+        else if (gameLose = true) {
            checkLoss();
          
-           
         } else if (gameWin = true) {
             checkWin();
-            // wins++;
-            // $("#wins").text(wins);
             
-           
-         
-        } else if (totalScore < matchNumber) {
-            gameFinish = false;
 
         }
         totalScore = parseInt(totalScore);
